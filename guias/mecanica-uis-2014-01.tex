@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish]{babel}
+\hyphenation{co-rres-pon-dien-te}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage[pdftex,colorlinks=true, pdfstartview=FitH, linkcolor=blue, citecolor=blue, urlcolor=blue, pdfpagemode=UseOutlines, pdfauthor={H. Asorey}, pdftitle={Mecánica 2014 - Guía 01} pdfkeywords={vectores}]{hyperref}
+\usepackage[adobe-utopia]{mathdesign}
+
+\hoffset -1.23cm
+\textwidth 16.5cm
+\voffset -2.0cm
+\textheight 26.0cm
+
+\begin{document}
+\begin{center}
+  {\small{Universidad Industrial de Santander - Escuela de Física}}\\
+  {\bf{Mecánica Teórica (Asorey)}}\\
+  \vspace{0.4cm}
+  Guía 01: Caos\\ 2014
+\end{center}
+\renewcommand{\labelenumi}{\arabic{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+\begin{enumerate}
+  \item {\bf{Oscilador armónico}}
+
+    Resuelva numéricamente la ecuación del oscilador armónico simple, $\ddot
+    \theta + \theta = 0$ para el caso $\theta_0=0.05$. Luego: 
+    \begin{enumerate}
+      \item Realice un gráfico de $\theta(t)$, $\dot \theta(t)$ y $p(q)$.
+        Verifique la existencia de un ciclo límite en el espacio de fases. 
+      \item Sabiéndose un sistema conservativo, estudie la estabilidad de la
+        solución a partir de la evolución de la energía total del sistema,
+        $E=E_k+E_g$, como función del tiempo.
+      \item Compárela con la solución analítica del péndulo mediante un gráfico
+        de la diferencia entre las dos soluciones como función del tiempo 
+    \end{enumerate}
+
+  \item {\bf{Oscilador de grandes amplitudes}}
+
+    Repita el ejercicio anterior pero para el oscilador más general, $\ddot
+    \theta + \sin \theta = 0$, para los casos $\theta_0=0.05$ y $\theta=1$.
+
+  \item {\bf{Péndulo}}
+
+    Resuelva en numéricamente la ecuación del péndulo general, que en su forma
+    adimensionalizada responde a la ecuación: $\ddot \theta + c \dot \theta +
+    \sin \theta = a \sin(\Omega t)$. Dejando fijos los valores de $c=0.5$ y
+    $\Omega=2/3$
+    \begin{enumerate} 
+      \item Estudie las soluciones para 80 ciclos de forzado para los casos
+        $a=0$, $a=0.3$, $a=0.9$, $a=1.15$, $a=1.35$ y $a=1.45$.
+      \item Habiendo amortiguación y forzado, analice el comportamiento de la
+        energía total del sistema como función del tiempo.
+      \item Para cada valor de $a$, dibuje el diagrama de fases e identifique
+        los casos caóticos por la existencia de un atractor extraño.
+      \item Realice el mapa de Poincaré en cada caso, considerando los puntos
+        del espacio de fases al concluir cada ciclo del forzado. Suponga que se
+        han superado los transitorios a partir del ciclo de forzado número
+        quince.
+      \item Elija una de las condiciones que conduce a un sistema caótico, y
+        haga un mapa de Poincaré para $10^6$ ciclos de forzado, obteniendo un
+        punto en el medio de cada ciclo. Estudie las condiciones de
+        auto-semejanza del mapa obtenido, confirmando que se trata de un
+        atractor extraño.  
+    \end{enumerate}
+
+  \item {\bf{Van der Pol}}
+
+    Resuelva en forma numérica la ecuación del oscilador de Van der Pol, $\ddot
+    \theta - \mu \left (1-\theta^2 \right ) \dot \theta + \theta = a \sin
+    \Omega t$ en los siguientes casos:
+    \begin{enumerate}
+      \item $\mu=0.09$, $a=0.$, $\Omega = 2/3$
+      \item $\mu=0.09$, $a=1.15$, $\Omega = 2/3$
+      \item $\mu=8.53$, $a=0.$, $\Omega = 0.628$
+      \item $\mu=8.53$, $a=1.15$, $\Omega = 0.628$
+    \end{enumerate}
+    En todos los casos, realice un gráfico de $\theta(t)$, el diagrama del
+    espacio de fases, y estudie el comportamiento de la energía como función
+    del tiempo.
+
+  \item {\bf{Edmon-Pullen}}
+
+    Para el Hamiltoniano de Edmon-Pullen, 
+    \[\mathcal{H} = \frac{1}{2m} \left ( p_x^2 + p_y^2 \right ) + \frac{m \omega_0^2}{2} \left ( q_x^2 + q_y^2 + \frac{1}{\lambda^2} q_x^2 q_y^2 \right ), \]
+    obtenga las ecuaciones de movimiento adimensionalizadas y luego resuelva
+    los siguientes puntos para los casos con energía $E=5$, $E=20$ y $E=100$
+    (unidades arbitrarias).
+    \begin{enumerate}
+      \item A partir de las ecuaciones de movimiento adimensionalizadas,
+        obtenga un sistema de ecuaciones diferenciales ordinarias de primer
+        orden apto para ser resuelto utilizando Runge-Kuta de cuarto orden.
+      \item Obtenga un conjunto de condiciones iniciales. Teniendo presente que
+        el sistema presenta simetría de intercambio ante los índices
+        $x\leftrightarrow y$, evite utilizar condiciones simétricas para las
+        condiciones inciales. Utilice la energía del sistema como un vínculo.
+      \item Estime un valor razonable para el tiempo de simulación, y resuelva
+        numéricamente las ecuaciones de movimiento. Verifique la estabilidad de
+        las soluciones analizando la evolución temporal de la energía total y
+        compárela con el valor definido para la energía en cada caso. 
+      \item Estudie los espacios de fases para cada caso. 
+      \item Realice un mapa de Poincaré $(q_y, p_y)$ para la condición $x=0$
+        (recuerde que para soluciones numéricas, en lugar de igualdad debe
+        considerar un entorno del 0, por ejemplo $|x|<10^{-3}$. Este valor
+          dependerá del paso numérico considerado.).
+      \item Utilice un algoritmo de Transformada Rápida de Fourier Discreta
+          (DFFT), como por ejemplo {\texttt{np.fft}}
+          (\href{http://docs.scipy.org/doc/numpy/reference/routines.fft.html}{http://docs.scipy.org/doc/numpy/reference/routines.fft.html}),
+          para buscar las frecuencias características del sistema. Analice cada
+          uno de los tres casos y a partir de los resultados obtenidos
+          establezca una relación entre el número de frecuencias
+          características y el comportamiento del sistema.
+        \item Utilizando el método de las pendientes, obtenga el valor del
+          coeficiente de Lyapunov en cada uno de los casos estudiados (recuerde
+          que debe mantener el valor de la energía constante y cambiar
+          ligeramente una de las condiciones iniciales).
+    \end{enumerate}
+  \item {\bf{Mapeos}}
+
+    El mapeo de Hassell está dado por la ecuación 
+    \[ y_{i+1} = \frac{k_1 y_i}{\left ( 1 + k_2 y_i \right )^{k_3}}, \]
+    donde $y_i$ representa a la población actual, y $k_1$, $k_2$ y $k_3$ son
+    los parámetros de la ecuación.
+    Para el caso $k_2=1$, estudiaremos la evolución temporal de la población en el espacio de parámetros $k_1$ y $k_3$. Para ello: 
+
+    \begin{enumerate}
+      \item Escriba un código para resolver la evolución temporal del mapeo de
+        Hassell, considerando $150$ ciclos para superar los efectos
+        transitorios dados por las condiciones iniciales.
+      \item Obtenga los diagramas de bifurcación para los casos $k_3=1,2,3,4,5
+        6$ con $k_1$ variando entre $1$ y $1000$ en pasos de $0.5$ de ancho,
+        graficando $50$ valores de $y_i$ con $i=151,\ldots,200$ como función de
+        $k_1$, para los seis casos considerados en $k_3$. Estudie para cada uno
+        de los seis casos el comportamiento del sistema, la existencia de
+        bifurcaciones, la transición a regímenes caóticos y la existencia de
+        islas de estabilidad. 
+      \item Para cada uno de los seis casos anteriores, obtenga la evolución de
+        los coeficientes de Lyapunov como función de $k_1$ utilizando el método
+        de la derivada. Suponga un valor de $10000$ para la evolución final del
+        sistema. Haga un gráfico del coeficiente de Lyapunov superpuesto sobre
+        el diagrama de bifurcación en cada caso. 
+    \end{enumerate}
+\end{enumerate}
+\end{document}

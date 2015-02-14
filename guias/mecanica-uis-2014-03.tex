@@ -1,0 +1,222 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish]{babel}
+\hyphenation{co-rres-pon-dien-te}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage[pdftex,colorlinks=true, pdfstartview=FitH, linkcolor=blue, citecolor=blue, urlcolor=blue, pdfpagemode=UseOutlines, pdfauthor={H. Asorey}, pdftitle={Mecánica 2014 - Guía 03}]{hyperref}
+\usepackage[adobe-utopia]{mathdesign}
+
+\hoffset -1.23cm
+\textwidth 16.5cm
+\voffset -2.0cm
+\textheight 26.0cm
+
+\begin{document}
+\begin{center}
+  {\small{Universidad Industrial de Santander - Escuela de Física}}\\
+  {\bf{Mecánica Teórica (Asorey)}}\\
+  \vspace{0.4cm}
+  Guía 03: Formulación Hamiltoniana\\ 2014
+\end{center}
+\renewcommand{\labelenumi}{\arabic{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+\begin{enumerate}
+  \item {\bf{Partícula en una caja}}
+
+    Una partícula está confinada en una caja unidimensional. Los bordes de la
+    caja se están desplazando hacia el centro con una velocidad mucho menor que
+    la velocidad de la partícula en la caja. Resuelva los siguientes puntos
+    utilizando primero la formulación Lagrangiana y luego la formulación
+    Hamiltoniana:
+    \begin{enumerate} 
+      \item si la cantidad de movimiento de la partícula es $p_0$ a tiempo
+        $t_0$, cuando las paredes están separadas por una distancia $x_0$ entre
+        sí, encuentre la cantidad de movimiento de la partícula a tiempo
+        $t>t_0$, suponiendo que las colisiones con las paredes son
+        perfectamente elásticas y el movimiento es no-relativista;
+      \item cuando las paredes están separadas por una distancia $x$, cuál debe
+        ser la fuerza promedio que debe ser aplicada a cada pared para que se
+        muevan a velocidad constante hacia el centro.
+    \end{enumerate}
+
+  \item {\bf{Fuerzas centrales}}
+
+    Escriba el problema del movimiento bajo fuerzas centrales de dos masas
+    puntuales en la formulación Hamiltoniana, eliminando las variables
+    cíclicas.
+
+  \item {\bf{Lagrangiano con término de interacción}}
+
+    El Lagrangiano de un sistema puede ser escrito como: 
+    \[ \mathcal{L} = a \dot x^2 + b \frac{\dot y}{x} + c \dot x \dot y + f y^2
+    \dot x \dot z + g \dot y - k \sqrt{x^2 + y^2}, \]
+    donde $a$, $b$, $c$, $f$, $g$ y $k$ son constantes. Obtenga el Hamiltoniano
+    del sistema, las ecuaciones de movimiento y diga que cantidades son
+    conservadas. 
+
+  \item {\bf{Lagrangiano numérico, I}}
+
+    El Lagrangiano de un sistema puede ser escrito como: 
+    \[ \mathcal{L} = \dot q_1^2 + \frac{\dot q_2^2}{a + b q_1^2}  + k_1 q_1^2 +
+    k_2 \dot q_1 \dot q_2, \]
+    siendo $a$, $b$, $k_1$ y $k_2$ constantes. 
+    \begin{enumerate}
+      \item Encuentre las ecuaciones de movimiento del sistema en la
+        formulación Hamiltoniana
+      \item Diga si el sistema tiene alguna magnitud conservada. 
+      \item Suponiendo que todas las constantes son iguales a $1$, usando el
+        algoritmo RK4 resuelva numéricamente las ecuaciones de movimiento
+        obtenidas, con condiciones iniciales ($t_0=0$), $q_1(t_0)=q_2(t_0)=0$,
+        $\dot q_1(t_0)=\dot q_2(t_0)=1$ (reescriba las condiciones iniciales
+        para $p_i$).
+      \item Haga un gráfico de $q_1$, $q_2$, $p_1$ y $p_2$ como función del
+        tiempo.
+      \item Haga un gráfico de la trayectoria del sistema en el espacio de
+        fases. 
+    \end{enumerate}
+
+  \item {\bf{Péndulo simple no tan simple}}
+
+    Imagine que el punto de sujeción de un péndulo simple, de masa $m$ y
+    longitud $l$, se dispone de forma tal que el mismo puede moverse a lo largo
+    de una parábola $y=a x^2$ en el plano vertical ($a>0$). Encuentre el
+    Hamiltoniano del sistema y las ecuaciones de movimiento del péndulo y del
+    punto de sujeción. Luego, suponga $a=0$ y eligiendo una condición inicial
+    no trivial ($z_0>0$, $\theta_0>0$), resuélvalas numéricamente. 
+  
+  \item {\bf{Dos resortes}} 
+    
+    Una partícula de masa $m$ puede moverse en 1 dimensión bajo la acción de
+    dos resortes de constantes elásticas $k_1$ y $k_2$ respectivamente. Cada
+    resorte está sujeto en un extremo a una pared fija y en el otro a la
+    partícula. La distancia de separación de las paredes es $a$. Los resortes
+    obedecen la ley de Hooke y tienen longitud de relajación igual a 0 (es
+    decir, siempre están tensionados).
+
+    \begin{enumerate}
+      \item Usando como coordenada generalizada $q$ la posición $x$ de la
+        partícula medida desde uno de los puntos fijos (de forma que estos se
+        encuentran en $x=0$ y $x=a$), encuentre el Lagrangiano y derive el
+        correspondiente Hamiltoniano. Obtenga las ecuaciones de movimiento y
+        diga si la energía es conservada y si el Hamiltoniano lo es.
+      \item Introduzca una nueva coordenada generalizada: 
+        \[ Q = q - b \sin \omega t, \quad \quad b=\frac{k_2}{k_1 + k_2} a,\]
+        y responda: ¿Cuál es el nuevo Lagrangiano como función de $Q$? ¿Cuál es
+        el Hamiltoniano correspondiente? ¿Es la energía una magnitud
+        conservada? ¿y el Hamiltoniano?
+    \end{enumerate}
+
+  \item {\bf{Lagrangiano numérico, II}} 
+    
+    Considere un Lagrangiano de la forma: 
+    \[ 
+      \mathcal{L} = \frac12 m \left ( \dot x^2 - \omega^2 x^2  \right )
+       \exp( \gamma t), 
+    \] 
+    donde la partícula de masa $m$ posee un movimiento unidimensional.
+    Suponiendo que todas las constantes son positivas:
+    
+    \begin{enumerate}
+      \item encuentre las ecuaciones de movimiento en la formulación
+        Lagrangiana; 
+      \item interprete las ecuaciones mediante la interpretación física de las
+        fuerzas actuando sobre la partícula;
+      \item Encuentre los momentos canónicos y construya el Hamiltoniano. ¿Es
+        el Hamiltoniano una constante de movimiento? 
+      \item Para las condiciones iniciales $x(0)=0$ y $\dot x=0$, y suponiendo
+        un sistema de unidades donde $\omega=\gamma=1$, resuelva numéricamente
+        las ecuaciones de movimiento y verifique a que valor tiene $x(t)$
+        para valores grandes de $t$.
+    \end{enumerate}
+
+  \item {\bf{Condición simpléctica}}
+
+    Mostrar que la transformación 
+    \begin{eqnarray*}
+      Q &=& q \cos \alpha - p \sin \alpha,\\
+      P &=& q \sin \alpha + p \cos \alpha,
+    \end{eqnarray*}
+    verifica la condición simpléctica para cualquier valor del parámetro
+    $\alpha$. Luego, encuentre una función generatriz $F$ para la
+    transformación. Explique el significado físico de esta transformación
+    cuando $\alpha=0$ y cuando $\alpha=\pi/2$.
+
+  \item {\bf{Transformación de punto}}
+
+    Las ecuaciones de transformación entre dos sistemas de coordenadas son: 
+    \begin{eqnarray*}
+      Q &=& \log \left ( 1 + \sqrt{q} \cos p \right ),\\
+      P &=& 2 \left ( 1 + \sqrt{q} \cos p \right ) \sqrt{q} \sin p.
+    \end{eqnarray*}
+    Muestre que si $p$ y $q$ son variables canónicas, entonces $Q$ y $P$
+    también lo son. Luego verifica que esta transformación es generada por:
+    \[ F_3 = - \left ( e^Q -1 \right )^2 \tan p.\]
+
+  \item {\bf{Condiciones directas}}
+
+    Muestre por evaluación directa que las condiciones directas para una
+    transformación canónica son equivalentes a la condición simpléctica
+    expresada en la forma: 
+    \[ \mathbb{J M} = \mathbb{M^{-1} J}.\]
+
+  \item {\bf{Evaluación simpléctica}}
+
+    Utilizando la condición simpléctica, muestre que la transformación de
+    coordenadas: 
+    \begin{eqnarray*}
+      Q_1 &=& q_1^2, \\
+      P_1 &=& \frac{p_1 \cos p_2 - 2 q_2}{2 q_1 \cos p_2}, \\
+      Q_2 &=& q_2 \sec p_2, \\
+      P_2 &=& \sin p_2 - 2 q_1,
+    \end{eqnarray*}
+    es canónica. Luego, encuentre una posible función generatriz para esta
+    transformación.
+
+  \item {\bf{Evaluación simpléctica}}
+
+    Para la transformación de punto en un sistema con dos grados de libertad:
+    \begin{eqnarray*}
+      Q_1 &=& q_1^2,\\
+      Q_2 &=& q_1 + q_2,
+    \end{eqnarray*}
+    encuentre las ecuaciones de transformación más generales posibles para
+    $P_1$ y $P_2$ de manera que la transformación general sea canónica. Muestre
+    que para una dada elección de las funciones $P_1$ y $P_2$, el Hamiltoniano
+    \[ 
+      \mathcal{H} = \left ( \frac{p_1 - p_2}{2 q_1} \right )^2 + p_2 + (q_1 +
+      q_2)^2
+    \]
+    puede ser transformado en un nuevo Hamiltoniano donde tanto $Q_1$ como
+    $Q_2$ sean cíclicos. Luego, obtenga $q_1$, $q_2$, $p_1$ y $p_2$ como
+    función del tiempo para condiciones iniciales genéricas.
+
+  \item {\bf{Oscilador armónico}}
+
+    Muestre que la transformación 
+    \begin{eqnarray*}
+      Q &=& p + i a q,\\
+      P &=& \frac{p - i a q}{2 i a},
+    \end{eqnarray*}
+    es una transformación canónica y encuentre una función generatriz. Luego,
+    use la transformación para resolver el oscilador armónico.
+
+  \item {\bf{Corchetes de Poisson}}
+
+    Muestre que si el Hamiltoniano y una función $F$ son constantes de
+    movimiento, entonces la enésima derivada parcial de $F$ con respecto al
+    tiempo, $\partial^n F/\partial t^n$, también lo es. Luego, considere el
+    movimiento de una partícula libre de masa $m$. Sabemos que en este caso el
+    Hamiltoniano del sistema es una magnitud conservada, y existe una constante
+    de movimiento
+    \[ F = x - \frac{p t}{m}.\]
+    Muestre por cálculo directo que la derivada parcial de $F$ respecto al
+    tiempo es una constante de movimiento y que cumple con la condición
+    $[\mathcal{H}, F]$.
+
+\end{enumerate}
+\end{document}

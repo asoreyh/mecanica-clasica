@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish]{babel}
+\hyphenation{co-rres-pon-dien-te}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage[pdftex,colorlinks=true, pdfstartview=FitH, linkcolor=blue, citecolor=blue, urlcolor=blue, pdfpagemode=UseOutlines, pdfauthor={H. Asorey}, pdftitle={Mecánica 2014 - Guía 02}]{hyperref}
+\usepackage[adobe-utopia]{mathdesign}
+
+\hoffset -1.23cm
+\textwidth 16.5cm
+\voffset -2.0cm
+\textheight 26.0cm
+
+\begin{document}
+\begin{center}
+  {\small{Universidad Industrial de Santander - Escuela de Física}}\\
+  {\bf{Mecánica Teórica (Asorey)}}\\
+  \vspace{0.4cm}
+  Guía 02: Fuerzas Centrales\\ 2014
+\end{center}
+\renewcommand{\labelenumi}{\arabic{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+\begin{enumerate}
+  \item {\bf{Choque cometario}}
+
+    Un planeta de masa $M$ posee una órbita de excentricidad $\epsilon = 1
+    - \alpha$, con $\alpha \ll 1$, alrededor del Sol. Suponga que el
+    movimiento del Sol puede ser obviado y sólo actúan las fuerzas
+    gravitacionales. Cuando el planeta se encuentra en el afelio es
+    golpeado por un cometa de masa $m$, con $m \ll M$, que viajaba en
+    dirección tangencial. Suponiendo que la colisión fue totalmente
+    inelástica, obtenga la energía cinética mínima que el cometa debe
+    tener para cambiar la órbita del planeta a una parábola.
+
+  \item {\bf{Órbita parabólica y circular}}
+
+    Para órbitas parabólicas y circulares en un potencial atractivo de la
+    forma $U=r^{-1}$, ambas con el mismo momento angular $L$, muestre que
+    la distancia al perihelio de la parábola es la mitad del radio de la
+    órbita circular. Luego, verifique que la velocidad de una partícula en
+    un punto cualquiera de la órbita parabólica es $\sqrt{2}$ veces más
+    grande que la velocidad en el mismo punto pero para una órbita
+    circular.
+
+  \item {\bf{Sección eficáz de la Tierra}}
+
+    Analice y discuta el trabajo de J.B. Tatum, ``The Capture
+    Cross-Section of Earth for Errant Asteroids'', JRASC {\bf 91}, 276
+    (1997),
+    \href{http://adsabs.harvard.edu/abs/1997JRASC..91..276T}{1997JRASC..91..276T}.
+
+  \item {\bf{Planeta X}} \label{X}
+
+    Suponga que el ``Planeta X'' existe y es un gemelo de la Tierra y está
+    ubicado en la misma órbita que la Tierra pero de forma tal que cuando
+    la Tierra está en el perihelio, el planeta X está en el afelio. Ahora
+    bien, dado que la órbita es elíptica, el ocultamiento del planeta X no
+    siempre es efectivo al ser visto desde la Tierra. Calcule, a primer
+    orden de aproximación en $\epsilon$, la máxima separación angular
+    entre nuestro planeta gemelo y el Sol visto desde la Tierra. ¿Podría
+    ser visible desde la Tierra?
+
+  \item {\bf{Año anómalo}}
+
+    El período de la Tierra entre dos tránsitos sucesivos por el perihelio
+    se denomina el ``año anómalo'' y es de $T_A=365.2596$ días solares
+    medios. Sabiendo que la excentricidad de la órbita terrestre es
+    $\epsilon_\oplus = 0.0167504$ y suponiendo que el movimiento es
+    perfectamente Kepleriano, calcule (numéricamente si fuera necesario)
+    la apertura angular de la posición de la Tierra medida desde el
+    perihelio cuando el tiempo transcurrido es igual a $T_A/4$.
+
+  \item {\bf{Puntos de Lagrange}}
+
+    El problema de 3 cuerpos restringido consiste en dos masas $M_1$ y
+    $M_2$ en órbita circular, una alrededor de la otra, y un tercer cuerpo
+    de masa $m$, $m \ll M_1$ y $m \ll M_2$, de manera que el efecto
+    gravitatorio de este cuerpo sobre los dos mayores puede ser
+    despreciado.
+
+    Los puntos de Lagrange (o puntos de Libración), son aquellos puntos
+    del espacio (identificados como $L_1, \ldots, L_5$) donde el potencial
+    total presenta un extremo y, por lo tanto, la fuerza neta que
+    experimenta el cuerpo de masa $m$ es nula.
+
+    A partir del Lagrangiano del sistema para la masa $m$, $\mathcal{L} =
+    \frac12 m \left (\dot{r}^2 + r^2 \dot{\theta}^2 \right ) -
+    V(r,\theta,t)$, y moviéndonos a un sistema comóvil con los cuerpos que
+    gira con frecuencia angular $\omega$, los dos cuerpos masivos parecen
+    estar en reposo. Es posible moverse a este sistema mediante la
+    transformación $\theta'=\theta + \omega t$. 
+    
+    \begin{enumerate} 
+      \item En el sistema comóvil y en coordenadas cilíndricas $(\rho,
+        \theta=\theta'-\omega t, z)$ con origen en el centro de masas,
+        obtenga el nuevo Lagrangiano del sistema
+      \item Identifique en el Lagrangiano los términos de Coriolis y
+        Centrífugo.
+      \item Obtenga las ecuaciones de movimiento a partir de las
+        ecuaciones de Lagrange, y encuentre las cinco posiciones donde se
+        verifica $\dot{\rho}=\dot{z} = \dot{\theta} = 0$. Estos son los
+        cinco puntos de Lagrange.
+      \item Perturbe las soluciones anteriores y determine si los puntos
+        encontrados son estables ($L_4$ y $L_5$) o inestables ($L_1$,
+        $L_2$ y $L_3$).
+      \item Encuentre las posiciones de los puntos de Lagrange en el
+        sistema Tierra-Sol y Sol-Júpiter.
+      \item Investigue sobre la importancia de los puntos de Lagrange para la ciencia aeroespacial
+    \end{enumerate}
+
+  \item {\bf{Puntos de Lagrange Numéricos}}
+
+    Utilizando un código basado en el algoritmo de leapfrog, resuelva
+    numéricamente la órbita de la Tierra en torno al Sol. Utilice los
+    principios de conservación para obtener las condiciones iniciales
+    cuando la Tierra se encuentra en el afelio. Luego, incluya un tercer
+    cuerpo de masa despreciable frente a las masas de la Tierra y el Sol,
+    y verifique las soluciones obtenidas en el punto anterior y la
+    estabilidad de las mismas. 
+
+  \item {\bf{Planeta X, el regreso}}
+
+    Utilizando un algoritmo leapfrog, resuelva numéricamente la órbita del
+    Sistema Planeta X-Sol-Tierra. Suponga que el Planeta X es idéntico a
+    la Tierra en todos los aspectos. Para las posiciones iniciales,
+    suponga que a tiempo $t=0$, la Tierra se encuentra en el perihelio y
+    el planeta X se encuentra en el afelio, y determine las
+    correspondientes velocidades de cada planeta en dichos puntos (sólo
+    para este punto desprecie las interacciones gravitatorias entre los
+    planetas).
+
+  \item {\bf{Cúmulo globular}}
+
+    Modifique el código de leapfrog para obtener un código que funcione
+    con el algoritmo Predictor-Corrector de Hermite con paso temporal
+    variable. Luego, estudie la evolución de un cúmulo globular esférico
+    con 50 estrellas de masas $m=1$. Como condiciones iniciales,
+    suponga que todas las estrellas están inicialmente en reposo
+    ({\emph{cold start}}) y se encuentran distribuidas uniformemente en el
+    interior de una esfera de radio $R=1$ (código {\texttt{cold-start.py}}).
+    En el sistema de unidades donde $G=1$, deje el código evolucionar entre
+    $t=0$ y $t=1$, con un paso temporal variable cuya base es $0.05$ (de esta
+    forma, el $dt=0.05\times \tau$, con $\tau$ igual al tiempo de paso
+    variable).
+
+  \item {\bf{Cúmulo globular y agujero negro}}
+
+    Imagine que en el centro del cúmulo globular anterior se encuentra un
+    agujero negro de masa $M=1000$ en reposo. Obtenga la evolución del cúmulo
+    con las mismas constantes y parámetros del caso anterior. 
+
+\end{enumerate}
+\end{document}
